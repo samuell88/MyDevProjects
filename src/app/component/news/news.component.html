@@ -1,0 +1,29 @@
+<div class="row" *ngIf="!loading">
+
+    <!-- pagination manuelle -->
+    <div class="col-3" *ngFor="let post of filteredPosts">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{post.title}}
+                </h5>
+                <p class="card-text">
+                    {{post.body}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- pagination manuelle -->
+    <!--    Page no {{page}}/{{nbPages}} - -->
+    <!--    <button (click)="pagePrecedente()">Page précédente</button>-->
+    <!--    <button (click)="pageSuivante()">Page suivante</button>-->
+    <ngb-pagination
+            [maxSize]="5"
+            [(page)]="page"
+            [pageSize]="nbNewsPerPage"
+            [collectionSize]="posts.length"></ngb-pagination>
+</div>
+
+<div class="spinner-border" *ngIf="loading"></div>
+

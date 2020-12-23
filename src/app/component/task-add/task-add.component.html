@@ -1,0 +1,28 @@
+<h2>Ajouter une tache</h2>
+
+<form (ngSubmit)="addTask(form)" #form="ngForm" [class.was-validated]="formSubmitted">
+
+    <div class="form-group">
+        <label>Nom</label>
+        <input class="form-control" name="name"
+               [disabled]="loading"
+               [(ngModel)]="task.name" required #nameInput="ngModel">
+        <div class="invalid-feedback" *ngIf="nameInput.invalid">
+            Le nom est obligatoire
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control"
+                  [disabled]="loading"
+                  name="description" [(ngModel)]="task.description"></textarea>
+    </div>
+
+    <button
+            [disabled]="loading"
+            class="btn btn-primary">
+        <span *ngIf="!loading">Sauver</span>
+        <div class="spinner-border" *ngIf="loading"></div>
+    </button>
+
+</form>

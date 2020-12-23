@@ -1,0 +1,31 @@
+<div class="container">
+
+    <header>
+        <h1>MyDevProject</h1>
+    </header>
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Mes projets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/task-add" routerLinkActive="active">Ajouter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/task-remove" routerLinkActive="active">Supprimer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/news" routerLinkActive="active">Notes</a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+
+    <router-outlet></router-outlet>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+    <div class="backdrop"></div>
+    <div class="spinner-border"></div>
+</div>

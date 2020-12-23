@@ -145,6 +145,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TaskList"
+    }
+  },
+  "defaultProject": "TaskList",
+  "cli": {
+    "analytics": "13168bf1-d226-4989-93f2-2234d8b45f2d"
+  }
 }

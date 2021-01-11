@@ -1,3 +1,4 @@
+<!-- titre et bouton ajouter -->
 <h2>
     Liste des taches
     <button class="btn btn-primary float-right" routerLink="/task-add">
@@ -5,9 +6,12 @@
     </button>
 </h2>
 
+<!-- barre de progression pour le loading
 <ngb-progressbar type="info" [striped]="true" [animated]="true" *ngIf="loading" [value]="100"></ngb-progressbar>
+-->
 
 <h3>Taches non terminées</h3>
+<!--  appel du composant task-table -->
 <app-task-table [tasks]="uncompletedTasks"
                 [checkboxMode]="false"
                 (completedClick)="updateTaskCompletion($event)"
@@ -21,6 +25,7 @@
                 (descriptionClick)="displayDescription($event, modalDescription)">
 </app-task-table>
 
+<!-- pop-up  Bootstrap-->
 <ng-template #modalDescription let-modal>
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Description</h4>
@@ -29,6 +34,7 @@
         </button>
     </div>
     <div class="modal-body">
+      <!-- affichage de la descrition de la tâche -->
         {{selectedDescription}}
     </div>
     <div class="modal-footer">

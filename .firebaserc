@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mydevproject-3ba90": {
+      "hosting": {
+        "TaskList": [
+          "mydevproject-3ba90"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mydevproject-3ba90"
+  }
+}

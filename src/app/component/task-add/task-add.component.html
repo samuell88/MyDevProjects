@@ -1,7 +1,8 @@
 <h2>Ajouter une tache</h2>
-
+<!-- formalaire d'jout d'une têche -->
 <form (ngSubmit)="addTask(form)" #form="ngForm" [class.was-validated]="formSubmitted">
 
+  <!-- disabled quand loading du formulaire -->
     <div class="form-group">
         <label>Nom</label>
         <input class="form-control" name="name"

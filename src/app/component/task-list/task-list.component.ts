@@ -29,14 +29,15 @@ export class TaskListComponent implements OnInit {
                 });
         }
 
+        // renvoie les tâches complétées
         get completedTasks() {
                 return this.tasks.filter(task => task.completed);
         }
-
+        // renvoie les tâches incomplètes
         get uncompletedTasks() {
                 return this.tasks.filter(task => !task.completed);
         }
-
+        // affichage de la description
         displayDescription(task: Task, modalTemplate) {
                 // avec Bootstrapo
                 this.selectedDescription = task.description;
@@ -47,6 +48,7 @@ export class TaskListComponent implements OnInit {
                 // Swal.fire(task.description);
         }
 
+        // tâches complétées
         updateTaskCompletion(task: Task, isAlreayChanged = false) {
                 if (!isAlreayChanged) {
                         task.completed = !task.completed;

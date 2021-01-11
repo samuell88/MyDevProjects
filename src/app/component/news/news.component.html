@@ -1,6 +1,6 @@
 <div class="row" *ngIf="!loading">
 
-    <!-- pagination manuelle -->
+    <!-- pagination -->
     <div class="col-3" *ngFor="let post of filteredPosts">
         <div class="card">
             <div class="card-body">
@@ -14,10 +14,7 @@
         </div>
     </div>
 
-    <!-- pagination manuelle -->
-    <!--    Page no {{page}}/{{nbPages}} - -->
-    <!--    <button (click)="pagePrecedente()">Page précédente</button>-->
-    <!--    <button (click)="pageSuivante()">Page suivante</button>-->
+  <!-- pagination  maxSize = nombre de sélecteur affiché-->
     <ngb-pagination
             [maxSize]="5"
             [(page)]="page"

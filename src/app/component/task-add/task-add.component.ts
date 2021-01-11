@@ -32,9 +32,10 @@ export class TaskAddComponent implements OnInit {
                 if (form.invalid) {
                         return;
                 }
-
+                // appel des méthodes pour afficher le loading
                 this.loadingService.showLoading();
                 this.loading = true;
+                // appel de task service pour jouter une tâche
                 this.taskService.addTask(this.task).subscribe(() => {
                         this.router.navigate(['/']);
                         this.loading = false;

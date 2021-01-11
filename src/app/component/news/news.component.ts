@@ -18,13 +18,13 @@ export class NewsComponent implements OnInit {
 
         constructor(private postService: PostService) {
         }
-
+        // Méthode pour la pagination
         get filteredPosts() {
                 const start = (this.page - 1) * this.nbNewsPerPage;
                 const end = start + this.nbNewsPerPage;
                 return this.posts.slice(start, end);
         }
-
+        // post services
         ngOnInit(): void {
                 this.loading = true;
                 this.postService.getAllPost().subscribe(value => {
@@ -33,6 +33,7 @@ export class NewsComponent implements OnInit {
                 });
         }
 
+        // retourne le nombre de pages totale
         get nbPages() {
                 return Math.round(this.posts.length / this.nbNewsPerPage);
         }

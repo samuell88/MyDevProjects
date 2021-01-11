@@ -10,7 +10,7 @@ export class PostService {
 
         constructor(private http: HttpClient) {
         }
-// retourne cette methode get
+// renvoie une liste de posts
         getAllPost(): Observable<Post[]> {
                 return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
         }

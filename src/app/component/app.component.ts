@@ -7,7 +7,7 @@ import {LoadingService} from '../service/loading.service';
         styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+        // injection du LoadingService
         constructor(private loadingService: LoadingService) {
         }
 

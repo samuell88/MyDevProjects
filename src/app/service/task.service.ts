@@ -11,7 +11,7 @@ export class TaskService {
 
         constructor(private http: HttpClient) {
         }
-
+        // liste de tâches
         getAllTasks() {
                 return this.http.get<Task[]>(environment.apiPrefix + '/task');
         }

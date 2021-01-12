@@ -1,7 +1,7 @@
 {
   "rulesFile": "database.rules.json",
   "hosting": {
-    "public": "dist/MyDevProjects",
+    "public": "dist/TaskList",
     "ignore": [
       "firebase.json",
       "**/.*",

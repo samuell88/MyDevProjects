@@ -1,10 +1,11 @@
 <div class="row" *ngIf="!loading">
 
-    <!-- pagination -->
+    <!-- posts list with boostrap cards -->
     <div class="col-3" *ngFor="let post of filteredPosts">
-        <div class="card">
+        <div class="card border-primary text-dark bg-light h-100">
+            <div class="card-header bg-primary text-white">Notes</div>
             <div class="card-body">
-                <h5 class="card-title">
+                <h5 class="card-title text-center">
                     {{post.title}}
                 </h5>
                 <p class="card-text">
@@ -14,8 +15,8 @@
         </div>
     </div>
 
-  <!-- pagination  maxSize = nombre de sélecteur affiché-->
-    <ngb-pagination
+  <!-- bootstrap pagination  -->
+    <ngb-pagination class="mt-5"
             [maxSize]="5"
             [(page)]="page"
             [pageSize]="nbNewsPerPage"

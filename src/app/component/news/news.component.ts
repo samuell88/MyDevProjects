@@ -38,15 +38,4 @@ export class NewsComponent implements OnInit {
                 return Math.round(this.posts.length / this.nbNewsPerPage);
         }
 
-        pageSuivante() {
-                if (this.page < this.nbPages) {
-                        this.page++;
-                }
-        }
-
-        pagePrecedente() {
-                if (this.page > 1) {
-                        this.page--;
-                }
-        }
 }

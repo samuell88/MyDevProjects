@@ -1,16 +1,13 @@
 <!-- titre et bouton ajouter -->
-<h2>
-    Liste des taches
-    <button class="btn btn-primary float-right" routerLink="/task-add">
-        <i class="fas fa-plus"></i>
+<h2 class="mb-5 mt-5 text-center">
+    Liste de projets
+    <button class="btn btn-success float-right rounded-circle" routerLink="/task-add">
+        <i class="fas fa-plus-circle"></i>
     </button>
 </h2>
 
-<!-- barre de progression pour le loading
-<ngb-progressbar type="info" [striped]="true" [animated]="true" *ngIf="loading" [value]="100"></ngb-progressbar>
--->
 
-<h3>Taches non terminées</h3>
+<h3>Projets à faire</h3>
 <!--  appel du composant task-table -->
 <app-task-table [tasks]="uncompletedTasks"
                 [checkboxMode]="false"
@@ -18,7 +15,7 @@
                 (descriptionClick)="displayDescription($event, modalDescription)">
 </app-task-table>
 
-<h3>Taches terminées</h3>
+<h3>Projets terminés</h3>
 <app-task-table [tasks]="completedTasks"
                 [checkboxMode]="true"
                 (completedChange)="updateTaskCompletion($event, true)"

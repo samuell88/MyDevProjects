@@ -1,31 +1,31 @@
 <table class="table">
     <thead>
-    <tr>
+    <tr class="text-center">
         <th>Id</th>
         <th>Nom</th>
         <th>Terminée</th>
-        <th>Description</th>
+        <th>Détail</th>
     </tr>
     </thead>
     <!-- Tableau des tâches -->
     <tbody>
     <tr *ngFor="let task of tasks" [class.table-success]="task.completed">
-        <td>{{task.id}}</td>
+        <td class="text-center">{{task.id}}</td>
         <td routerLink="/task-details/{{task.id}}">{{task.name}}</td>
         <!-- ecriture de lien avec parametre alternative -->
         <!--        <td [routerLink]="['/task-details',task.id]">{{task.name}}</td>-->
 
         <!-- mode image -->
-        <td (click)="completedClicked(task)" *ngIf="!checkboxMode">
+        <td (click)="completedClicked(task)" *ngIf="!checkboxMode" class="text-center">
             <!--            {{task.completed ? 'V' : 'X'}}-->
             <i class="far fa-square" *ngIf="!task.completed"></i>
             <i class="far fa-check-square" *ngIf="task.completed"></i>
         </td>
         <!-- mode checkbox -->
-        <td *ngIf="checkboxMode">
+        <td *ngIf="checkboxMode" class="text-center">
             <input type="checkbox" [(ngModel)]="task.completed" (change)="completedChanged(task)">
         </td>
-        <td>
+        <td class="text-center text-success">
             <i *ngIf="task.description" (click)="descriptionClicked(task)" class="far fa-eye"></i>
         </td>
     </tr>

@@ -1,6 +1,6 @@
-<table class="table">
+<table class="table table-striped table-hover table-bordered">
     <thead>
-    <tr class="text-center">
+    <tr class=" table-warning  table-bordered border-warning text-center">
         <th>Id</th>
         <th>Nom</th>
         <th>Terminée</th>
@@ -9,7 +9,7 @@
     </thead>
     <!-- Tableau des tâches -->
     <tbody>
-    <tr *ngFor="let task of tasks" [class.table-success]="task.completed">
+    <tr  *ngFor="let task of tasks" [class.table-secondary]="task.completed">
         <td class="text-center">{{task.id}}</td>
         <td routerLink="/task-details/{{task.id}}">{{task.name}}</td>
         <!-- ecriture de lien avec parametre alternative -->
@@ -25,7 +25,7 @@
         <td *ngIf="checkboxMode" class="text-center">
             <input type="checkbox" [(ngModel)]="task.completed" (change)="completedChanged(task)">
         </td>
-        <td class="text-center text-success">
+        <td class="text-center text-success ">
             <i *ngIf="task.description" (click)="descriptionClicked(task)" class="far fa-eye"></i>
         </td>
     </tr>

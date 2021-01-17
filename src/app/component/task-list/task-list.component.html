@@ -7,7 +7,7 @@
 </h2>
 
 
-<h3>Projets à faire</h3>
+<h3 class="mb-4">Projets à faire</h3>
 <!--  appel du composant task-table -->
 <app-task-table [tasks]="uncompletedTasks"
                 [checkboxMode]="false"
@@ -15,7 +15,7 @@
                 (descriptionClick)="displayDescription($event, modalDescription)">
 </app-task-table>
 
-<h3>Projets terminés</h3>
+<h3 class="mb-4">Projets terminés</h3>
 <app-task-table [tasks]="completedTasks"
                 [checkboxMode]="true"
                 (completedChange)="updateTaskCompletion($event, true)"

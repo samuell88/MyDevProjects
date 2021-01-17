@@ -1,4 +1,4 @@
-<h2>Modifier un projet</h2>
+<h2 class="mb-4 mt-4">Modifier un projet</h2>
 
 <div class="spinner-border" *ngIf="!task"></div>
 
@@ -18,8 +18,8 @@
                   name="description" [(ngModel)]="task.description"></textarea>
     </div>
 
-    <button class="btn btn-primary">
-        Sauver
+    <button class="btn btn-success mr-4">
+        Enregistrer
     </button>
   <!-- bouton de suppression -->
     <button class="btn btn-danger" type="button" (click)="deleteTask()">

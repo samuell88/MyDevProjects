@@ -1,25 +1,29 @@
 <div class="container">
+  <header>
+    <div class="row mt-5">
+      <div class="col">
+        <h1>MyDevProject</h1>
+      </div>
+      <nav class="col">
+          <ul class="nav justify-content-end">
+              <li class="nav-item mr-3">
+                  <a class="btn btn-outline-info" role="button" routerLink="/home" >Mes projets</a>
+              </li>
+              <li class="nav-item mr-3">
+                  <a class="btn btn-outline-primary" role="button" routerLink="/task-add">Ajouter</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="btn btn-outline-danger" routerLink="/task-remove">Supprimer</a>
+              </li>
+              <li class="nav-item mr-3">
+                  <a class="btn btn-outline-success" routerLink="/news">Notes</a>
+              </li>
+          </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <h1 class="mb-5">MyDevProject</h1>
-    </header>
-    <nav>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="btn btn-outline-info" role="button" routerLink="/home" >Mes projets</a>
-            </li>
-            <li class="nav-item">
-                <a class="btn btn-outline-primary" role="button" routerLink="/task-add">Ajouter</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-danger" routerLink="/task-remove">Supprimer</a>
-            </li>
-            <li class="nav-item">
-                <a class="btn btn-outline-success" routerLink="/news">Notes</a>
-            </li>
-        </ul>
-    </nav>
-    <hr>
+
 
     <router-outlet></router-outlet>
 
